@@ -1,0 +1,18 @@
+﻿<!-- HotelRooms.xaml -->
+    
+<Window x:Class="ServerWPF.HotelRooms"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="e:\studies\university\github\3course\project-practice\лабораторна робота 3\project\serverwpf\hotelrooms.xaml
+e:\studies\university\github\3course\project-practice\лабораторна робота 3\project\serverwpf\hotelrooms.xaml.cs
+http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServerWPF"
+        mc:Ignorable="d"
+        Title="Кімнати готелю" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="textBoxSearch" Height="30" VerticalAlignment="Top" Margin="0, 30, 0, 0" FontSize="16" FontFamily="Lucida Sans Unicode" TextChanged="TextBox_TextChanged" />
+        <ListBox x:Name="listBox" Margin="0, 60, 0, 0" SelectionChanged="listBox_SelectionChanged" />
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Список номерів готелю" VerticalAlignment="Top" FontSize="20" FontFamily="Lucida Sans Unicode" />
+    </Grid>
+</Window>
