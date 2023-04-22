@@ -1,0 +1,19 @@
+﻿<!-- MainWindow.xaml -->
+    
+<Window x:Class="ServerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServerWPF"
+        mc:Ignorable="d"
+        Title="Головний екран" Height="450" Width="800">
+    <Grid>
+        <Menu>
+            <MenuItem Header="Меню">
+                <MenuItem Header="Переглянути номери готелю" Click="MenuItem_Click" />
+            </MenuItem>
+        </Menu>
+        <TextBlock TextWrapping="Wrap" Text="Головний екран" HorizontalAlignment="Center" FontFamily="Lucida Sans Unicode" FontSize="20"/>
+    </Grid>
+</Window>

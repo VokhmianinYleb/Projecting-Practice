@@ -1,0 +1,12 @@
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\bin\Debug\net6.0\DataLib.deps.json
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\bin\Debug\net6.0\DataLib.dll
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\bin\Debug\net6.0\DataLib.pdb
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\obj\Debug\net6.0\DataLib.csproj.AssemblyReference.cache
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\obj\Debug\net6.0\DataLib.GeneratedMSBuildEditorConfig.editorconfig
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\obj\Debug\net6.0\DataLib.AssemblyInfoInputs.cache
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\obj\Debug\net6.0\DataLib.AssemblyInfo.cs
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\obj\Debug\net6.0\DataLib.csproj.CoreCompileInputs.cache
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\obj\Debug\net6.0\DataLib.dll
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\obj\Debug\net6.0\refint\DataLib.dll
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\obj\Debug\net6.0\DataLib.pdb
+E:\studies\University\github\3course\Project-Practice\Лабораторна робота 3\Project\DataLib\obj\Debug\net6.0\ref\DataLib.dll
