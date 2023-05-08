@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ClientWPF.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="db_connection" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=(LocalDb)\MSSQLLocalDB;AttachDBFilename=E:\studies\University\github\3course\Project-Practice\Lab4\mydatabase.mdf</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

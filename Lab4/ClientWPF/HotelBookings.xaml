@@ -1,0 +1,41 @@
+﻿<Window x:Class="ClientWPF.HotelBookings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientWPF"
+        mc:Ignorable="d"
+        Title="HotelBookings" Height="450" Width="800">
+    <Grid>
+        <Menu>
+            <MenuItem Header="Меню">
+                <MenuItem Header="Створити" Click="CreateBooking" />
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <TextBox x:Name="textBoxSearch" Height="30" VerticalAlignment="Top" Margin="0, 30, 0, 0" FontSize="16" FontFamily="Lucida Sans Unicode" TextChanged="textBoxSearch_TextChanged" />
+            <ListBox x:Name="listBoxBooking" Margin="0, 60, 0, 0">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Редагувати" Click="EditBooking" />
+                        <MenuItem Header="Видалити" Click="MenuItem_Click_2" />
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Номер " />
+                            <TextBlock Text="{Binding id_room}" />
+                            <TextBlock Text=" (" />
+                            <TextBlock Text="{Binding arrival_date}" />
+                            <TextBlock Text=" — " />
+                            <TextBlock Text="{Binding departure_date}" />
+                            <TextBlock Text=")" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Довідник бронювань" VerticalAlignment="Top" FontSize="20" FontFamily="Lucida Sans Unicode" />
+        </Grid>
+    </Grid>
+</Window>

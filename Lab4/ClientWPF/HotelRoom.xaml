@@ -1,0 +1,53 @@
+﻿<Window x:Class="ClientWPF.HotelRoom"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientWPF"
+        mc:Ignorable="d"
+        Title="HotelRoom" Height="300" Width="400">
+    <Grid>
+        <Grid Width="300" Height="180" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="textBoxNumber" Grid.Row="0" FontFamily="Lucida Sans Unicode" FontSize="14" VerticalAlignment="Center" />
+            <TextBox x:Name="textBoxPrice" Grid.Row="1" FontFamily="Lucida Sans Unicode" FontSize="14" VerticalAlignment="Center" />
+            <ComboBox x:Name="comboBoxType" Grid.Row="2" SelectedIndex="0" FontFamily="Lucida Sans Unicode" FontSize="14" VerticalAlignment="Center">
+                <ComboBoxItem>Стандарт</ComboBoxItem>
+                <ComboBoxItem>Люкс</ComboBoxItem>
+                <ComboBoxItem>Сімейний</ComboBoxItem>
+                <ComboBoxItem>Президентський</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="comboBoxStatus" Grid.Row="3" SelectedIndex="0" FontFamily="Lucida Sans Unicode" FontSize="14" VerticalAlignment="Center" SelectionChanged="SelectionChanged">
+                <ComboBoxItem>Вільний</ComboBoxItem>
+                <ComboBoxItem>Зайнятий</ComboBoxItem>
+                <ComboBoxItem>На прибиранні</ComboBoxItem>
+                <ComboBoxItem>Очікує на прибирання</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="comboBoxGuests" Grid.Row="4" SelectedIndex="0" FontFamily="Lucida Sans Unicode" FontSize="14" VerticalAlignment="Center">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding surname}" />
+                            <TextBlock Text=" " />
+                            <TextBlock Text="{Binding name}" />
+                            <TextBlock Text=" " />
+                            <TextBlock Text="{Binding patronymic}" />
+                            <TextBlock Text=" (" />
+                            <TextBlock Text="{Binding passport}" />
+                            <TextBlock Text=")" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Grid.Row="5" Content="Зберегти" VerticalAlignment="Center" Width="150" FontFamily="Lucida Sans Unicode" FontSize="14" Click="SaveChanges" />
+        </Grid>
+    </Grid>
+</Window>
