@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/HotelDC" />
+  <nestedChildShapes>
+    <classShape Id="429dd5a6-ac4e-4921-8c2b-6506e20fdb14" absoluteBounds="6.25, 3.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/HotelDC/Room" />
+      <nestedChildShapes>
+        <elementListCompartment Id="480a258d-e8c7-41c5-8d81-b8b1e8d2ae51" absoluteBounds="6.2650000000000006, 3.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d50609b-0b6a-4b9e-b4ae-353be5b4d4c7" absoluteBounds="1.875, 3.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/HotelDC/Guest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f9dec4d-8a54-4474-9559-1550de0ef566" absoluteBounds="1.8899999999999997, 3.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41c855dc-ba1c-406c-8e04-9b494079f802" absoluteBounds="4.25, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HotelDC/Booking" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4c52bf6-2280-43a3-abf2-ccd5fbb61e19" absoluteBounds="4.265, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 4.26044840494792); (6.25 : 4.26044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelDC/Guest/Guest_Room" />
+      <nodes>
+        <classShapeMoniker Id="0d50609b-0b6a-4b9e-b4ae-353be5b4d4c7" />
+        <classShapeMoniker Id="429dd5a6-ac4e-4921-8c2b-6506e20fdb14" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 3.25); (2.875 : 1.48159912109375); (4.25 : 1.48159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelDC/Guest/Guest_Booking" />
+      <nodes>
+        <classShapeMoniker Id="0d50609b-0b6a-4b9e-b4ae-353be5b4d4c7" />
+        <classShapeMoniker Id="41c855dc-ba1c-406c-8e04-9b494079f802" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.28125 : 3.375); (7.28125 : 1.48159912109375); (6.25 : 1.48159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HotelDC/Room/Room_Booking" />
+      <nodes>
+        <classShapeMoniker Id="429dd5a6-ac4e-4921-8c2b-6506e20fdb14" />
+        <classShapeMoniker Id="41c855dc-ba1c-406c-8e04-9b494079f802" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
