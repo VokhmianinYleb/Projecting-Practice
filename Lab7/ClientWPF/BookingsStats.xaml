@@ -1,0 +1,43 @@
+﻿<Window x:Class="ClientWPF.BookingsStats"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:local="clr-namespace:ClientWPF"
+        mc:Ignorable="d"
+        Title="BookingsStats" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <lvc:CartesianChart x:Name="mainChart" Margin="0,0,0,10">
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries Title="My Line Series"
+                Values="{Binding CountArray}" />
+            </lvc:CartesianChart.Series>
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="Дати" Labels="{Binding DateArray}" />
+            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="Кількість" />
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock Margin="5, 0, 0, 0" Text="Починаючи з" VerticalAlignment="Center" />
+            <DatePicker x:Name="datePickerStart" Margin="5, 0, 0, 0" SelectedDateChanged="datePickerStart_SelectedDateChanged" />
+            <TextBlock Margin="5, 0, 0, 0" Text="Закінчуючи" VerticalAlignment="Center" />
+            <DatePicker x:Name="datePickerEnd" Margin="5, 0, 0, 0" SelectedDateChanged="datePickerEnd_SelectedDateChanged" />
+            <ComboBox x:Name="comboBox" Margin="5, 0, 0, 0" SelectedIndex="0" SelectionChanged="comboBox_SelectionChanged">
+                <ComboBoxItem>По даті створення бронювання</ComboBoxItem>
+                <ComboBoxItem>По даті заїзду</ComboBoxItem>
+                <ComboBoxItem>По даті виїзду</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Left">
+            <MenuItem Header="Меню">
+                <MenuItem Header="Друк" Click="MenuItem_Click_Print" />
+                <MenuItem Header="Зберегти у png" Click="MenuItem_Click_SaveToPng" />
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
