@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="HotelDC" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="" Member="Room">
+    <Type Name="Room">
+      <Column Name="id" AutoSync="OnInsert" Type="System.Int32" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="class" Member="type" Storage="_class" Type="System.String" CanBeNull="false" />
+      <Column Name="status" Type="System.String" CanBeNull="false" />
+      <Column Name="price" Type="System.Single" CanBeNull="false" />
+      <Column Name="id_guest" Type="System.Int32" CanBeNull="true" />
+      <Association Name="Room_Booking" Member="Booking" Storage="_Bookings" ThisKey="id" OtherKey="id_room" Type="Booking" />
+      <Association Name="Guest_Room" Member="Guest" ThisKey="id_guest" OtherKey="id" Type="Guest" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Guest">
+    <Type Name="Guest">
+      <Column Name="id" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" CanBeNull="false" />
+      <Column Name="surname" Type="System.String" CanBeNull="false" />
+      <Column Name="patronymic" Type="System.String" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" CanBeNull="false" />
+      <Column Name="passport" Type="System.String" CanBeNull="false" />
+      <Column Name="email" Type="System.String" CanBeNull="false" />
+      <Association Name="Guest_Room" Member="Room" ThisKey="id" OtherKey="id_guest" Type="Room" />
+      <Association Name="Guest_Booking" Member="Booking" Storage="_Bookings" ThisKey="id" OtherKey="id_guest" Type="Booking" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Booking">
+    <Type Name="Booking">
+      <Column Name="id" AutoSync="Never" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_guest" Type="System.Int32" CanBeNull="false" />
+      <Column Name="id_room" Type="System.Int32" CanBeNull="false" />
+      <Column Name="arrival_date" Type="System.DateTime" CanBeNull="false" />
+      <Column Name="departure_date" Type="System.DateTime" CanBeNull="false" />
+      <Column Name="create_date" Type="System.DateTime" CanBeNull="false" />
+      <Association Name="Guest_Booking" Member="Guest" Storage="_Guests" ThisKey="id_guest" OtherKey="id" Type="Guest" IsForeignKey="true" />
+      <Association Name="Room_Booking" Member="Room" Storage="_Rooms" ThisKey="id_room" OtherKey="id" Type="Room" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

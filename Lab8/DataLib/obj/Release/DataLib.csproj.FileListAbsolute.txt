@@ -1,0 +1,6 @@
+E:\studies\University\github\3course\Project-Practice\Lab4\DataLib\bin\Release\DataLib.dll
+E:\studies\University\github\3course\Project-Practice\Lab4\DataLib\bin\Release\DataLib.pdb
+E:\studies\University\github\3course\Project-Practice\Lab4\DataLib\obj\Release\DataLib.csproj.AssemblyReference.cache
+E:\studies\University\github\3course\Project-Practice\Lab4\DataLib\obj\Release\DataLib.csproj.CoreCompileInputs.cache
+E:\studies\University\github\3course\Project-Practice\Lab4\DataLib\obj\Release\DataLib.dll
+E:\studies\University\github\3course\Project-Practice\Lab4\DataLib\obj\Release\DataLib.pdb
